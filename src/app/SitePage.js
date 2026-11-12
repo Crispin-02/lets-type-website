@@ -6,8 +6,10 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 const PRIMARY_PHONE = "971504416171";
+const SECONDARY_PHONE = "971545366667";
 const WHATSAPP_PHONE = "971528266007";
 const DISPLAY_PRIMARY_PHONE = "+971 50 441 6171";
+const DISPLAY_SECONDARY_PHONE = "+971 54 536 6667";
 const DISPLAY_WHATSAPP_PHONE = "+971 52 826 6007";
 const CONTACT_EMAIL = "letstype2021@gmail.com";
 
@@ -287,6 +289,7 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
           <div className="topbar-contact" aria-label="Contact options">
             <div className="topbar-contact-pill">
               <a className="topbar-phone" href={`tel:${PRIMARY_PHONE}`}><span aria-hidden="true">&#9742;</span> {DISPLAY_PRIMARY_PHONE}</a>
+              <a className="topbar-phone" href={`tel:${SECONDARY_PHONE}`}>{DISPLAY_SECONDARY_PHONE}</a>
               <a className="topbar-whatsapp" href={generalWhatsAppUrl} target="_blank" rel="noreferrer" aria-label={`Chat with us on WhatsApp at ${DISPLAY_WHATSAPP_PHONE}`}>
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.1 1.6 5.9L.2 24l6.4-1.7a12 12 0 0 0 5.5 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.5-8.4ZM12.1 21.7c-1.7 0-3.4-.5-4.8-1.3l-.4-.2-3.8 1 1-3.7-.2-.4a9.7 9.7 0 1 1 8.2 4.6Zm5.3-7.3c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1a7.8 7.8 0 0 1-2.3-1.4 8.6 8.6 0 0 1-1.6-2c-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.5.1-.8.4s-1 1-1 2.4 1 2.8 1.1 3c.1.2 2 3.1 4.8 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.3-.6-.4Z"/></svg>
               </a>
@@ -296,7 +299,7 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
       </div>
       <header className="site-header">
         <Link className="brand" href="/" aria-label="LET'S TYPE home">
-          <span className="brand-mark">LT</span>
+          <span className="brand-mark"><img className="brand-symbol" src="/logo-mark.png" alt="" /></span>
           <span className="brand-copy">
             <strong>LET&apos;S TYPE</strong>
             <small>TYPING SERVICES</small>
@@ -426,7 +429,7 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
             </div>
             <div className="hero-buttons">
               <button className="btn btn-primary" onClick={() => openEnquiry("Visit & Tourist Visa")}>Enquire About a Visa <span aria-hidden="true">&#8594;</span></button>
-              <a className="btn btn-glass" href={generalWhatsAppUrl} target="_blank" rel="noreferrer"><span className="whatsapp-icon" aria-hidden="true">&#9673;</span>Chat on WhatsApp</a>
+              <a className="btn btn-glass" href={generalWhatsAppUrl} target="_blank" rel="noreferrer"><span className="whatsapp-icon" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false"><path d="M20.52 3.48A11.83 11.83 0 0 0 12.1 0C5.53 0 .18 5.35.18 11.92c0 2.1.55 4.15 1.6 5.96L.08 24l6.27-1.64a11.9 11.9 0 0 0 5.74 1.46h.01c6.57 0 11.92-5.35 11.92-11.92 0-3.18-1.24-6.17-3.5-8.42ZM12.1 21.8a9.9 9.9 0 0 1-5.04-1.38l-.36-.22-3.72.98.99-3.63-.24-.37a9.86 9.86 0 0 1-1.52-5.26c0-5.47 4.45-9.92 9.92-9.92 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 0 1 2.9 7.01c0 5.47-4.45 9.92-9.92 9.92Zm5.44-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.8-1.49-1.78-1.66-2.08-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.09 4.49.71.31 1.27.5 1.7.64.72.23 1.37.2 1.88.12.57-.08 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg></span>Chat on WhatsApp</a>
             </div>
             <p className="hero-note">Friendly assistance | Clear information | Personal support</p>
           </div>
@@ -778,9 +781,25 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
             <div className="contact-methods-heading"><span className="section-kicker">CHOOSE HOW TO REACH US</span><h2 id="contact-methods-title">We&apos;re just a message away.</h2><p>Pick the contact option that feels easiest for you.</p></div>
             <div className="contact-methods-grid">
               <a className="contact-method-card contact-method-whatsapp" href={generalWhatsAppUrl} target="_blank" rel="noreferrer"><span className="contact-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20.5 3.5A11.7 11.7 0 0 0 12.1.1C5.6.1.3 5.4.3 11.9c0 2.1.5 4.1 1.6 5.9L.2 23.8l6.1-1.6a11.8 11.8 0 0 0 5.7 1.5h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.1-3.4-8.4ZM12 21.7a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.6 1 1-3.6-.3-.4a9.8 9.8 0 0 1-1.5-5.2c0-5.4 4.4-9.8 9.8-9.8 2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8Zm5.4-7.3c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5H8c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.1-.3-.2-.6-.3Z" /></svg></span><span className="contact-method-overline">QUICK CHAT</span><h3>WhatsApp</h3><p>Send your question and share the details when it suits you.</p><strong>{DISPLAY_WHATSAPP_PHONE} <span aria-hidden="true">&#8594;</span></strong></a>
-              <a className="contact-method-card" href={`tel:${PRIMARY_PHONE}`}><span className="contact-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h3l2 5-2.2 1.6a15 15 0 0 0 6.6 6.6L16 14l5 2v3a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3Z" /></svg></span><span className="contact-method-overline">SPEAK WITH US</span><h3>Call the team</h3><p>Prefer a conversation? Call us and tell us what kind of support you need.</p><strong>{DISPLAY_PRIMARY_PHONE} <span aria-hidden="true">&#8594;</span></strong></a>
+              <div className="contact-method-card"><span className="contact-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 3h3l2 5-2.2 1.6a15 15 0 0 0 6.6 6.6L16 14l5 2v3a2 2 0 0 1-2.2 2A18 18 0 0 1 3 5.2 2 2 0 0 1 5 3Z" /></svg></span><span className="contact-method-overline">SPEAK WITH US</span><h3>Call the team</h3><p>Prefer a conversation? Call us and tell us what kind of support you need.</p><strong><a href={`tel:${PRIMARY_PHONE}`}>{DISPLAY_PRIMARY_PHONE}</a><a href={`tel:${SECONDARY_PHONE}`}>{DISPLAY_SECONDARY_PHONE}</a></strong></div>
               <a className="contact-method-card" href={`mailto:${CONTACT_EMAIL}`}><span className="contact-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m4 7 8 6 8-6"/></svg></span><span className="contact-method-overline">SEND US A NOTE</span><h3>Email our team</h3><p>Write to us with your question and we&apos;ll help you find the right service.</p><strong>{CONTACT_EMAIL} <span aria-hidden="true">&#8594;</span></strong></a>
               <article className="contact-method-card"><span className="contact-method-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span className="contact-method-overline">FIND OUR OFFICE</span><h3>Visit us in Abu Dhabi</h3><p>Mussafah Shabia 9<br/>Abu Dhabi, UAE</p><strong>LET&apos;S TYPE · Abu Dhabi</strong></article>
+            </div>
+          </section>
+          <section className="contact-location-card" aria-label="Our office location">
+            <div className="contact-location-copy">
+              <span className="contact-method-overline">COME SAY HELLO</span>
+              <h2>Find us in Abu Dhabi</h2>
+              <p>Mussafah Shabia 9<br />Abu Dhabi, United Arab Emirates</p>
+              <a href="https://maps.app.goo.gl/s6r8qB9n5UMAupqb9" target="_blank" rel="noreferrer">Get directions <span aria-hidden="true">&#8594;</span></a>
+            </div>
+            <div className="contact-location-map-frame">
+              <iframe
+                src="https://maps.google.com/maps?q=24.3424667,54.532292&z=15&output=embed"
+                title="LET’S TYPE location in Abu Dhabi"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </section>
           <div className="contact-page-note"><span aria-hidden="true">&#10003;</span><p><strong>Not sure what to ask?</strong> A short description of what you need is enough to get the conversation started.</p></div>
@@ -855,7 +874,7 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
         <div className="footer-main">
           <div className="footer-brand">
             <Link className="brand footer-logo" href="/">
-              <span className="brand-mark">LT</span>
+              <span className="brand-mark"><img className="brand-symbol" src="/logo-mark.png" alt="" /></span>
               <span className="brand-copy">
                 <strong>LET&apos;S TYPE</strong>
                 <small>TYPING SERVICES</small>
@@ -865,6 +884,16 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
               Your partner for visit visa enquiries, typing and documentation
               services in Abu Dhabi, UAE.
             </p>
+            <a className="footer-location-map" href="https://maps.app.goo.gl/s6r8qB9n5UMAupqb9" target="_blank" rel="noreferrer" aria-label="Open LET'S TYPE location in Google Maps">
+              <iframe
+                src="https://maps.google.com/maps?q=24.3424667,54.532292&z=17&output=embed"
+                title="LET'S TYPE location map"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                tabIndex={-1}
+                aria-hidden="true"
+              />
+            </a>
           </div>
 
           <div>
@@ -889,6 +918,7 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
             <h3>Contact Us</h3>
             <p>Mussafah Shabia 9, Abu Dhabi, UAE</p>
             <a href={`tel:${PRIMARY_PHONE}`}>{DISPLAY_PRIMARY_PHONE}</a>
+            <a href={`tel:${SECONDARY_PHONE}`}>{DISPLAY_SECONDARY_PHONE}</a>
             <a href={`tel:${WHATSAPP_PHONE}`}>{DISPLAY_WHATSAPP_PHONE}</a>
             <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>
             <a
@@ -915,7 +945,9 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
         rel="noreferrer"
         aria-label="Contact us on WhatsApp"
       >
-        W
+        <svg className="floating-whatsapp-icon" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path fill="currentColor" d="M16.02 3.2A12.7 12.7 0 0 0 5.1 22.38L3.4 28.6l6.37-1.67A12.72 12.72 0 1 0 16.02 3.2Zm0 23.1c-1.94 0-3.85-.52-5.51-1.5l-.4-.24-3.78.99 1.01-3.68-.26-.42a10.36 10.36 0 1 1 8.94 4.85Zm5.69-7.76c-.31-.15-1.84-.91-2.12-1.01-.29-.1-.5-.15-.71.15-.21.31-.81 1.01-.99 1.22-.18.2-.36.23-.67.08-.31-.15-1.31-.48-2.5-1.52-.92-.82-1.54-1.83-1.72-2.14-.18-.31-.02-.47.13-.62.14-.14.31-.36.46-.54.15-.18.21-.31.31-.52.1-.2.05-.38-.03-.53-.08-.15-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.54.08-.82.39-.28.31-1.07 1.04-1.07 2.55s1.1 2.96 1.25 3.16c.15.21 2.16 3.3 5.23 4.63.73.31 1.3.5 1.74.64.73.23 1.39.2 1.91.12.58-.09 1.84-.75 2.1-1.47.26-.72.26-1.33.18-1.47-.08-.13-.28-.2-.59-.36Z"/>
+        </svg>
       </a>
 
     </>
