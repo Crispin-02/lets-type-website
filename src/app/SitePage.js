@@ -787,20 +787,19 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
             </div>
           </section>
           <section className="contact-location-card" aria-label="Our office location">
-            <div className="contact-location-copy">
-              <span className="contact-method-overline">COME SAY HELLO</span>
-              <h2>Find us in Abu Dhabi</h2>
-              <p>Mussafah Shabia 9<br />Abu Dhabi, United Arab Emirates</p>
-              <a href="https://maps.app.goo.gl/s6r8qB9n5UMAupqb9" target="_blank" rel="noreferrer">Get directions <span aria-hidden="true">&#8594;</span></a>
-            </div>
-            <div className="contact-location-map-frame">
-              <iframe
-                src="https://maps.google.com/maps?q=24.3424667,54.532292&z=15&output=embed"
-                title="LET’S TYPE location in Abu Dhabi"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
+            <a className="contact-location-map-frame location-illustration" href="https://maps.app.goo.gl/s6r8qB9n5UMAupqb9" target="_blank" rel="noreferrer" aria-label="Open directions to LET'S TYPE at Mussafah Shabia 9, Abu Dhabi">
+              <span className="network-map-art">
+                <svg className="network-world" viewBox="0 0 900 380" preserveAspectRatio="xMidYMid meet" aria-label="World map highlighting Abu Dhabi">
+                  <image href="/world-map-silhouette.svg" x="0" y="0" width="900" height="380"/>
+                  <circle className="uae-pulse" cx="586" cy="154" r="18"/><circle className="uae-node" cx="586" cy="154" r="4"/>
+                  <path className="uae-link" d="M586 154 632 194h50"/><g className="uae-label" transform="translate(682 178)"><rect width="166" height="48" rx="8"/><text x="13" y="20">ABU DHABI</text><text x="13" y="36">UNITED ARAB EMIRATES</text></g>
+                </svg>
+                <span className="network-address"><strong>Mussafah Shabia 9</strong><small>Abu Dhabi, United Arab Emirates</small></span>
+                <span className="network-coordinates">24.3425° N&nbsp; 54.5323° E</span>
+                <span className="map-open-label">OPEN DIRECTIONS <span aria-hidden="true">↗</span></span>
+              </span>
+            </a>
+
           </section>
           <div className="contact-page-note"><span aria-hidden="true">&#10003;</span><p><strong>Not sure what to ask?</strong> A short description of what you need is enough to get the conversation started.</p></div>
         </section>}
@@ -884,15 +883,10 @@ export default function SitePage({ pageKey = "home", initialService = "" }) {
               Your partner for visit visa enquiries, typing and documentation
               services in Abu Dhabi, UAE.
             </p>
-            <a className="footer-location-map" href="https://maps.app.goo.gl/s6r8qB9n5UMAupqb9" target="_blank" rel="noreferrer" aria-label="Open LET'S TYPE location in Google Maps">
-              <iframe
-                src="https://maps.google.com/maps?q=24.3424667,54.532292&z=17&output=embed"
-                title="LET'S TYPE location map"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                tabIndex={-1}
-                aria-hidden="true"
-              />
+            <a className="footer-location-map footer-location-illustration" href="https://maps.app.goo.gl/s6r8qB9n5UMAupqb9" target="_blank" rel="noreferrer" aria-label="Open LET'S TYPE location in Google Maps">
+              <img className="footer-world-map" src="/world-map-silhouette.svg" alt="" />
+              <span className="footer-map-pin" aria-hidden="true"></span>
+              <span className="footer-map-caption"><strong>Mussafah Shabia 9</strong><small>Abu Dhabi, UAE&nbsp; &#8599;</small></span>
             </a>
           </div>
 
